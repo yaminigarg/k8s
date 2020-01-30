@@ -15,6 +15,9 @@ spec:
     - name: jnlp
       image: jenkins/jnlp-slave
       imagePullPolicy: Always
+      env:
+      - name: JENKINS_URL
+      - value: http://a5c335f6031d911ea983d026a02028c3-1564996554.ap-south-1.elb.amazonaws.com/
     - name: docker
       image: docker:18.06.1
       command: ["tail", "-f", "/dev/null"]
